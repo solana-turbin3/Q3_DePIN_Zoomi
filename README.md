@@ -36,6 +36,7 @@ This project is a DePIN-powered smart scooter rental system that enables 24/7 se
 - Solenoid lock 12V
 - Relay Module 5V
 - 12V Battery
+- Step-down
 
 2) Hardware Schematics:
 
@@ -49,7 +50,7 @@ State Machine
 
 ### Solana Protocol
 
-1) State accounts
+Let's start with the state accounts...
 
 *Rider Account*
 ```rust
