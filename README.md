@@ -70,8 +70,8 @@ pub struct Rider {
 pub struct Scooter {
     pub id: u32,                // Scooter id ??
     pub owner: Pubkey,          // Scooter owner
-    pub price_tier: u8,         // Princing tier
-    pub drop_area_list:         // TBD ?? do we need something like this ?
+    pub price: u16,             // Princing per hour ??
+    pub status: u8,             // Scooter status (offline, available, in use, locked)
 }
 ```
 - PDA derived from id + "scooter"
@@ -90,13 +90,15 @@ pub struct Rental {
 - PDA derived from Rider wallet and Scooter id
 - Account is initialized at the moment of rental, payed by the rider and close at the end of rental contract if all is successful
 
+
+???? TBD 
+
 *Escrow State Account*
 ```rust
-pub struct Rental {
+pub struct Escrow {
     pub rider: Pubkey,          // Rider wallet
     pub scooter_owner: Pubkey,  // Scooter owner wallet
     pub amount: u64,            // Amount of the rental period
     pub collateral: u64,        // Amount of the collateral
-
 }
 ```
