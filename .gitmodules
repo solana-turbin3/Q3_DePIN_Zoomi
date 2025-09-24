@@ -1,0 +1,6 @@
+[submodule "smart-contract"]
+	path = smart-contract
+	url = https://github.com/AndreiaCanadas/zoomi-smart-contract
+[submodule "firmware"]
+	path = firmware
+	url = https://github.com/AndreiaCanadas/zoomi-firmware
